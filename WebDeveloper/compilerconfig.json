@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "css/site.css",
+    "inputFile": "scss/styles.scss"
+  },
+  {
+    "outputFile": "css/datepicker.css",
+    "inputFile": "Content/bootstrap-datetimepicker-build.less"
+  }
+]

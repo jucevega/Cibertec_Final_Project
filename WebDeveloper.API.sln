@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDeveloper.API", "WebDeveloper.API\WebDeveloper.API.csproj", "{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDeveloper.Model", "WebDeveloper.Model\WebDeveloper.Model.csproj", "{799EC88D-C8F0-47BC-A707-9C74023E17A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDeveloper.DataAccess", "WebDeveloper.DataAccess\WebDeveloper.DataAccess.csproj", "{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugExpress|Any CPU = DebugExpress|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.DebugExpress|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.DebugExpress|Any CPU.Build.0 = Debug|Any CPU
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB92B6C8-1568-4036-82BC-C16AC04FFC0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.DebugExpress|Any CPU.ActiveCfg = DebugExpress|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.DebugExpress|Any CPU.Build.0 = DebugExpress|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799EC88D-C8F0-47BC-A707-9C74023E17A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.DebugExpress|Any CPU.ActiveCfg = DebugExpress|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.DebugExpress|Any CPU.Build.0 = DebugExpress|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
