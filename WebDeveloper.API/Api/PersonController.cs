@@ -41,15 +41,25 @@ namespace WebDeveloper.API.Api
         }
 
         [HttpPost]
-        public IHttpActionResult Person(Person person)
-        {            
-            return Ok("Post ok");
+        public IHttpActionResult Update(Person person)
+        {
+            if (!ModelState.IsValid) return BadRequest("The model is invalid");
+            _person.Update(person);
+            return Ok($"The record {person.BusinessEntityID} is updated.");
         }
 
         [HttpPut]
-        public IHttpActionResult TestPut()
-        {
-            return Ok("Put ok");
+        public IHttpActionResult Creation(Person person)
+        {            
+            if (!ModelState.IsValid) return BadRequest("The model is invalid");
+            person.rowguid = Guid.NewGuid();
+            person.BusinessEntity = new BusinessEntity
+            {
+                rowguid = person.rowguid,
+                ModifiedDate = person.ModifiedDate
+            };            
+            _person.Add(person);
+            return Ok("The record was created.");
         }
 
         [HttpDelete]
