@@ -1,10 +1,11 @@
 ﻿(function () {
     'use strict';
-    angular.module('app').controller('applicationController', applicationController);
+    angular.module('app')
+        .controller('applicationController', applicationController);
 
-    applicationController.$inject = ['$scope', '$state'];
+    //applicationController.$inject = ['$scope', '$state'];
 
-    function applicationController($scope, $state) {
+    function applicationController(){//($scope, $state) {
               
     }
 })();

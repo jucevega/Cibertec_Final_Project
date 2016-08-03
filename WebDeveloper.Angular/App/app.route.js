@@ -13,14 +13,14 @@
         routes.forEach(function (r) {
             $routeProvider.when(r.url, r.config);
         });
-        $routeProvider.otherwise({ redirectTo: '/' });
+        $routeProvider.otherwise({ redirectTo: '/home' });
     }
 
     // Define the routes
     function getRoutes() {
         return [
             {
-                url: '/',
+                url: '/home',
                 config: {
                     templateUrl: 'app/home.html',
                     title: 'home'                    
