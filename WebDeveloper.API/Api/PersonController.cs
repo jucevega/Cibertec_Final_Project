@@ -37,13 +37,14 @@ namespace WebDeveloper.API.Api
         public IHttpActionResult EditById(int id)
         {
             var person = _person.GetById(id);
+            if(person==null) return BadRequest();
             return Ok(person);
         }
 
         [HttpPost]
         public IHttpActionResult Update(Person person)
         {
-            if (!ModelState.IsValid) return BadRequest("The model is invalid");
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             _person.Update(person);
             return Ok($"The record {person.BusinessEntityID} is updated.");
         }
@@ -51,7 +52,7 @@ namespace WebDeveloper.API.Api
         [HttpPut]
         public IHttpActionResult Creation(Person person)
         {            
-            if (!ModelState.IsValid) return BadRequest("The model is invalid");
+            if (!ModelState.IsValid) return BadRequest(ModelState);            
             person.rowguid = Guid.NewGuid();
             person.BusinessEntity = new BusinessEntity
             {
