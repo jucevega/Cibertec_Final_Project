@@ -14,12 +14,12 @@ namespace WebDeveloper.Angular
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/dependencies")
-                .Include("~/Scripts/angular-route.js")
+                .IncludeDirectory("~/Scripts/angular", "*.js", true)
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/app")
                 .Include("~/app/app.js")                
-                .Include("~/app/app.route.js")
+                .Include("~/app/app.routes.js")
                 .Include("~/app/app.controller.js")
                 .IncludeDirectory("~/app/private", "*.js", true)
                 );

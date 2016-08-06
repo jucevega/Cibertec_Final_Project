@@ -1,10 +1,15 @@
 ﻿(function () {
-    var app = angular.module('app', [
-       'ngRoute'
-    ]);
+    'use strict';
 
+    angular
+        .module('app', ['ngRoute', 'ui.router']);
+    //    .config(routeConfig);
 
-    app.run(['$route', function ($route) {
-        // Include $route to kick start the router.
-    }]);
+    //routeConfig.$inject = ['$routeProvider'];
+
+    //function routeConfig($routeProvider) {
+    //    $routeProvider
+    //        .when('/home', { templateUrl: 'app/home.html', title: 'home' })            
+    //        .otherwise({ redirectTo: '/home' });
+    //}
 })();
