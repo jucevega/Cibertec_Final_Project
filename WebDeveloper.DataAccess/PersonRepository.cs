@@ -23,7 +23,7 @@ namespace WebDeveloper.DataAccess
         {
             using (var dbContext = new WebContextDb())
             {
-                return Automapper.GetGeneric<IEnumerable<Person>, List<PersonModelView>>(dbContext.Persons.Page(page,size).OrderByDescending(x => x.ModifiedDate));
+                return Automapper.GetGeneric<IEnumerable<Person>, List<PersonModelView>>(dbContext.Persons.OrderByDescending(x => x.BusinessEntityID).Page(page, size));
             }
         }
 

@@ -36,7 +36,7 @@ namespace WebDeveloper.Areas.Personal.Controllers
                 page = 1;
                 size = 10;
             }            
-            return PartialView("_List",_personRepository.GetListDto().Page(page.Value, size.Value));
+            return PartialView("_List", _personRepository.GetListDtoPage(page.Value, size.Value));
         }
 
         public PartialViewResult EmailList(int? id)

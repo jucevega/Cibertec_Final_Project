@@ -17,7 +17,7 @@ namespace WebDeveloper.Model
             BusinessEntityAddress = new HashSet<BusinessEntityAddress>();
             BusinessEntityContact = new HashSet<BusinessEntityContact>();
         }
-
+        
         public int BusinessEntityID { get; set; }
 
         public Guid rowguid { get; set; }

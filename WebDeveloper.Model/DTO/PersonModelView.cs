@@ -11,7 +11,6 @@ namespace WebDeveloper.Model.DTO
     {
         public int BusinessEntityID { get; set; }
 
-
         [Required]
         [StringLength(50)]
         [Display(Name = "FirstName", ResourceType = typeof(Resources.Resource))]

@@ -1,5 +1,13 @@
 ﻿<div ng-controller="PersonController as vm">
     <h1>{{vm.title}}</h1>
-
+    <div>
+        <button ng-click="vm.update()">Update Record</button>
+    </div>
+    <div ng-repeat="person in vm.personList">
+        <div>{{::person.businessEntityID}} </div>
+        <div>{{::person.firstName}} </div>
+        <div>{{::person.middleName}} </div>
+        <div>{{::person.lastName}} </div>
+        <div>{{::person.modifiedDate}} </div>
+    </div>
 </div>
-    

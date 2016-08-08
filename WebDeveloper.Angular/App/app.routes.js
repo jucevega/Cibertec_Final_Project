@@ -6,8 +6,6 @@
 	routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 	function routeConfig($stateProvider, $urlRouterProvider) {
-		//$urlRouterProvider.otherwise('/search/searchcases');
-
 		$stateProvider
             .state("home", {
             	url: "/home",

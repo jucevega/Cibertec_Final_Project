@@ -12,10 +12,10 @@ namespace WebDeveloper.API.Api
 {
     public class AccountController : ApiController
     {
-        public async Task<IHttpActionResult> Login(LoginViewModel login)
+        public IHttpActionResult Login(LoginViewModel login)
         {
             //if (!ModelState.IsValid)
-                return new Task(BadRequest(login));
+                return Ok(login);
             //var result = await Microsoft.AspNet.Identity.Owin.SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             //switch (result)
             //{

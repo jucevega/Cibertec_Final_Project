@@ -25,7 +25,9 @@ namespace WebDeveloper.DataAccess
             {
                 return _config ?? new MapperConfiguration(cfg =>
                 {
-                    cfg.CreateMap<Person, PersonModelView>();
+                    cfg.CreateMap<Person, PersonModelView>()
+                        .IgnoreAllPropertiesWithAnInaccessibleSetter();
+
                     cfg.CreateMap<Address, AddressModelView>();
                 });
             }
