@@ -14,6 +14,10 @@
             .state('person',{
             	url: "/person",
                 templateUrl: 'app/private/person/index.html'
-            });
+            })
+	        .state('otherwise', {
+	            url: "/home",
+	            templateUrl: 'app/home.html'
+	        });
 	}
 })();
