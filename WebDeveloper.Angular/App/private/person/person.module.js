@@ -6,7 +6,7 @@
 
     personController.$inject = ['$scope', 'personService'];
 
-    function personController($scope, personService) {
+    function personController($scope,  personService) {
         var vm = this;
         vm.title = 'Person Module';
         vm.getPerson = getPerson;
@@ -17,43 +17,36 @@
 
         init();
         function init() {
+            loadData();
+        }
+
+        function loadData() {
             personService.getList(1, 10).then(function (data) {
                 vm.personList = data;
             });
         }
-
         function getPerson(id) {
             personService.edit(id).then(function (data) {
-                vm.updatePerson = data;                
+                vm.updatePerson = null;
+                vm.updatePerson = data;
             });
         }
         function personUpdate(person) {
-            //var person = {
-            //    "personType": "EM",
-            //    "nameStyle": false,
-            //    "title": null,
-            //    "firstName": "Julio",
-            //    "middleName": "J",
-            //    "lastName": "Sánchez",
-            //    "modifiedDate": "2017-01-07T00:00:00",
-            //    "suffix": null,
-            //    "emailPromotion": 0,
-            //    "additionalContactInfo": null,
-            //    "demographics": "<IndividualSurvey xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey\"><TotalPurchaseYTD>0</TotalPurchaseYTD></IndividualSurvey>",
-            //    "password": null,
-            //    "businessEntity": null,
-            //    "businessEntityContact": []
-            //};
-            personService.update(person).then(function () {
-                closeModal();
-            });
+            if (person) {
+                personService.update(person).then(function () {
+                    vm.updatePerson = null;
+                    closeModal();
+                    loadData();
+                });
+            }
         }
 
         function createPerson(person) {
             if (person) {
-                personService.create(person).then(function (data) {                    
+                personService.create(person).then(function (data) {
                     vm.newPerson = null;
                     closeModal();
+                    loadData();
                 });
             }
         }

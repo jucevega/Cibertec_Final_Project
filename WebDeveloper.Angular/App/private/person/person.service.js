@@ -2,6 +2,8 @@
     var apiUrl = 'http://localhost/WebDeveloper-API/';
     angular.module('app').factory('personService', personService);
 
+    personService.$inject = ['$http'];
+
     function personService($http) {
         var service = {
             create: create,
@@ -42,7 +44,7 @@
         }
 
         function update(person) {
-            return $http.put(apiUrl + 'person', person)
+            return $http.post(apiUrl + 'person', person)
                 .then(function (result) {
                     return result.data;
                 }, function (error) {

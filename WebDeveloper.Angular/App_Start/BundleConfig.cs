@@ -29,6 +29,11 @@ namespace WebDeveloper.Angular
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new DynamicFolderBundle("js", "*.js", false, new JsMinify()));
+            bundles.Add(new DynamicFolderBundle("css", "*.css", false, new CssMinify()));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
