@@ -10,7 +10,8 @@ namespace WebDeveloper.Angular
         {
             bundles.Add(new ScriptBundle("~/bundles/angular")
                 .Include("~/Scripts/jquery-3.1.0.js")
-                .Include("~/Scripts/angular.js")                
+                .Include("~/Scripts/angular.js")
+                .Include("~/Scripts/bootstrap.js")
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/dependencies")
@@ -22,6 +23,7 @@ namespace WebDeveloper.Angular
                 .Include("~/app/app.routes.js")
                 .Include("~/app/app.controller.js")
                 .IncludeDirectory("~/app/private", "*.js", true)
+                .IncludeDirectory("~/app/components","*.js", true)
                 );
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

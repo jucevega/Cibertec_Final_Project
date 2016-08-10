@@ -54,6 +54,7 @@ namespace WebDeveloper.API.Api
         {            
             if (!ModelState.IsValid) return BadRequest(ModelState);            
             person.rowguid = Guid.NewGuid();
+            person.ModifiedDate = DateTime.Now;
             person.BusinessEntity = new BusinessEntity
             {
                 rowguid = person.rowguid,

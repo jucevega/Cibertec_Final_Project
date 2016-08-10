@@ -15,5 +15,6 @@
             	url: "/person",
                 templateUrl: 'app/private/person/index.html'
             });
+		$urlRouterProvider.otherwise("/person");
 	}
 })();
