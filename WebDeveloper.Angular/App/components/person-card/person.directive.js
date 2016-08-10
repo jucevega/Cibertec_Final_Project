@@ -19,16 +19,7 @@
 
         directiveController.$inject = ['$scope'];
 
-        function directiveController($scope) {
-            $scope.getPersonId = getPersonId();
-            //$scope.getDeleteLink = getDeleteLink();
-
-            //function getDeleteLink() {                
-            //}
-
-            function getPersonId() {
-                return $scope.personId;
-            }
+        function directiveController($scope) {            
         }
     }
 })();

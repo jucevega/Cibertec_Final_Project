@@ -24,8 +24,7 @@
 
         function getPerson(id) {
             personService.edit(id).then(function (data) {
-                vm.updatePerson = data;
-                //console.log(vm.person);
+                vm.updatePerson = data;                
             });
         }
         function personUpdate(person) {
@@ -46,18 +45,21 @@
             //    "businessEntityContact": []
             //};
             personService.update(person).then(function () {
-                $("button[data-dismiss='modal']").click();
+                closeModal();
             });
         }
 
         function createPerson(person) {
             if (person) {
-                personService.create(person).then(function (data) {
-                    //console.log(person);
+                personService.create(person).then(function (data) {                    
                     vm.newPerson = null;
-                    $("button[data-dismiss='modal']").click();
+                    closeModal();
                 });
             }
+        }
+
+        function closeModal() {
+            $("button[data-dismiss='modal']").click();
         }
 
     }
